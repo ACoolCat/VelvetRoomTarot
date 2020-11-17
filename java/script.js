@@ -1,4 +1,4 @@
-const cards = [
+const threeFour = [
   'https://static.wikia.nocookie.net/megamitensei/images/8/84/P4G-FoolArcana.png/revision/latest?cb=20131103161956',
   'https://static.wikia.nocookie.net/megamitensei/images/c/ca/Magician.png/revision/latest?cb=20080716203618',
   'https://static.wikia.nocookie.net/megamitensei/images/b/bc/Priestess.png/revision/latest?cb=20080716203638',
@@ -21,3 +21,27 @@ const cards = [
   'https://static.wikia.nocookie.net/megamitensei/images/f/ff/Sun-0.png/revision/latest?cb=20160404202738',
   'https://static.wikia.nocookie.net/megamitensei/images/b/b0/Judgement.png/revision/latest?cb=20160404202809'
 ]
+
+const pullthreeFour = () => {
+  let paper = threeFour[Math.floor(Math.random()*threeFour.length)];
+  console.log(paper);
+  const $paper = $("<img>");
+  $paper.attr("src", paper);
+  $("body").append($paper)
+  $paper.addClass("luck")
+  $(".luck").css("display", "inline-block")
+  $(".luck").css({"height": "200px","width": "100px"});
+
+}
+
+$(() => {
+  const $random = $("<div>")
+  $random.text("Add random image")
+  $random.addClass("card")
+  $("body").append($random);
+  $(".card").css("background-color", "blue");
+  $(".card").css({"height": "100px","width": "100px"});
+  $(".card").css("cursor", "pointer");
+  $random.on('click',pullthreeFour);
+
+})

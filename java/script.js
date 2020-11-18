@@ -23,25 +23,28 @@ const threeFour = [
 ]
 
 const pullthreeFour = () => {
-  let paper = threeFour[Math.floor(Math.random()*threeFour.length)];
-  console.log(paper);
-  const $paper = $("<img>");
-  $paper.attr("src", paper);
-  $("body").append($paper)
-  $paper.addClass("luck")
-  $(".luck").css("display", "inline-block")
-  $(".luck").css({"height": "200px","width": "100px"});
+  var i;
+  for (i=0; i<3; i++) {
+    let paper = threeFour[Math.floor(Math.random()*threeFour.length)];
+    console.log(paper);
+    const $paper = $("<img>");
+    $paper.attr("src", paper);
+    $("body").append($paper)
+    $paper.addClass("luck")
+    $(".luck").css("display", "inline-block")
+    $(".luck").css({"height": "200px","width": "100px"});
+  }
 
 }
 
 $(() => {
-  const $random = $("<div>")
-  $random.text("Add random image")
-  $random.addClass("card")
-  $("body").append($random);
+  const $past = $("<div>")
+  $past.text("Reveal fates")
+  $past.addClass("card")
+  $("body").append($past);
   $(".card").css("background-color", "blue");
   $(".card").css({"height": "100px","width": "100px"});
   $(".card").css("cursor", "pointer");
-  $random.on('click',pullthreeFour);
+  $past.on('click',pullthreeFour);
 
 })

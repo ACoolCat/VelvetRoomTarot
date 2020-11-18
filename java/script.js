@@ -45,6 +45,9 @@ $(() => {
   $(".card").css("background-color", "blue");
   $(".card").css({"height": "100px","width": "100px"});
   $(".card").css("cursor", "pointer");
-  $past.on('click',pullthreeFour);
+  $past.on('click', (event) => {
+    pullthreeFour();
+    $(event.currentTarget).toggle()
+  });
 
 })

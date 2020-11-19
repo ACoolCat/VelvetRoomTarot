@@ -1,0 +1,58 @@
+*{
+  border: 1px solid gold;
+  background: url("room.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Stalinist One', cursive;
+  color: white;
+}
+
+.holder{
+  display: grid;
+  grid-template-columns: 30vw auto auto;
+  grid-template-rows: 25vh 50vh auto;
+  text-align: center;
+}
+
+#spacer1{
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+#spacer2{
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+#spacer3{
+  grid-row-start: 1;
+  grid-column-start: 3;
+}
+
+#spacer4{
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+#spacer5{
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+#spacer6{
+  grid-row-start: 3;
+  grid-column-start: 3;
+}
+
+
+#luck{
+  grid-row-start: 2;
+  grid-column-start: 2;
+  display: inline;
+}
+
+#card{
+  grid-row-start: 3;
+  grid-column-start: 2;
+}

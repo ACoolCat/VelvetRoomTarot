@@ -38,7 +38,7 @@ const pullthreeFour = () => {
     console.log(paper);
     const $paper = $("<img>");
     $paper.attr("src", paper);
-    $("body").append($paper)
+    $(".luck").append($paper)
     $paper.addClass("luck")
     $(".luck").css("display", "inline-block")
     $(".luck").css({"height": "200px","width": "100px"});
@@ -53,11 +53,8 @@ const pullthreeFour = () => {
 $(() => {
   const $past = $("<div>")
   $past.text("Reveal fates")
-  $past.addClass("card")
-  $("body").append($past);
-  $(".card").css("background-color", "blue");
-  $(".card").css({"height": "100px","width": "100px"});
-  $(".card").css("cursor", "pointer");
+  $past.attr("id", card)
+  $(".card").append($past);
   $past.on('click', (event) => {
     pullthreeFour();
     $(event.currentTarget).toggle()

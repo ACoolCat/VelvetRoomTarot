@@ -49,10 +49,15 @@
 #luck{
   grid-row-start: 2;
   grid-column-start: 2;
-  display: inline;
 }
 
 #card{
   grid-row-start: 3;
   grid-column-start: 2;
+}
+
+.luck{
+  display: inline-block;
+  height: 300px;
+  width: 200px;
 }

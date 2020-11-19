@@ -38,10 +38,8 @@ const pullthreeFour = () => {
     console.log(paper);
     const $paper = $("<img>");
     $paper.attr("src", paper);
-    $(".luck").append($paper)
+    $(".future").append($paper)
     $paper.addClass("luck")
-    $(".luck").css("display", "inline-block")
-    $(".luck").css({"height": "200px","width": "100px"});
   }
 
 }

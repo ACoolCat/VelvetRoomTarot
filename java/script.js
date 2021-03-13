@@ -30,16 +30,26 @@ const threeFour = [
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////CARD GENERATOR
 /////////////////////////////////////////////////////////////////////////////////////////
-
+var pullCounter;
+pullCounter = 3;
 const pullthreeFour = () => {
   var i;
-  for (i=0; i<3; i++) {
+  var holdCard;
+
+  for (i=0; i<pullCounter; i++) {
     let paper = threeFour[Math.floor(Math.random()*threeFour.length)];
-    console.log(paper);
-    const $paper = $("<img>");
-    $paper.attr("src", paper);
-    $(".future").append($paper)
-    $paper.addClass("luck")
+    if (holdCard !== paper) {
+      console.log(paper);
+      const $paper = $("<img>");
+      $paper.attr("src", paper);
+      $(".future").append($paper)
+      $paper.addClass("luck")
+    }else{
+      console.log("skipped");
+      pullCounter=1;
+      pullthreeFour();
+    }
+    holdCard = paper;
   }
 
 }

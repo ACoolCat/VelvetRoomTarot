@@ -6,16 +6,17 @@
   background-size: cover;
   font-family: 'Stalinist One', cursive;
   color: white;
-}
-
-.holder{
-  display: grid;
-  grid-template-columns: 30vw auto auto;
-  grid-template-rows: 25vh 50vh auto;
   text-align: center;
 }
 
-#spacer1{
+.holder{
+  /* display: grid;
+  grid-template-columns: 30vw auto auto;
+  grid-template-rows: 25vh 50vh auto; */
+  text-align: center;
+}
+
+/* #spacer1{
   grid-row-start: 1;
   grid-column-start: 1;
 }
@@ -43,17 +44,16 @@
 #spacer6{
   grid-row-start: 3;
   grid-column-start: 3;
-}
+} */
 
 
 #luck{
-  grid-row-start: 2;
-  grid-column-start: 2;
+  text-align: center;
+  margin-top: 25vh;
 }
 
 #card{
-  grid-row-start: 3;
-  grid-column-start: 2;
+  margin-top: 50vh;
 }
 
 .luck{
